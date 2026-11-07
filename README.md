@@ -36,3 +36,10 @@ README の利用例だけでは動かなかった点を書き残しています�
 ## 文面の変更
 
 `src/content/ja.ts` と `src/content/en.ts` を編集します。両方の構造は `src/content/types.ts` で揃えているので、片方だけ項目を増やすと型エラーになります。
+
+## ライセンスとクレジット
+
+- [smarthr-ui](https://github.com/kufu/smarthr-ui) は MIT License（Copyright 2018 SmartHR）です。配布物にライブラリのコードを含むため、サイトのフッターに著作権表示とライセンスへのリンクを置いています。
+- SmartHR Design System の[利用規約](https://smarthr.design/terms/)で制限されている SmartHR ロゴ、イラストレーション、ブランドカラーは使っていません。
+- 言語切替などのアイコンは smarthr-ui が内包する [react-icons](https://github.com/react-icons/react-icons) 経由の Font Awesome Free（アイコンは CC BY 4.0）です。フッターにクレジットを置いています。
+- このリポジトリ自体のコードと文面の著作権は長屋篤典にあります。

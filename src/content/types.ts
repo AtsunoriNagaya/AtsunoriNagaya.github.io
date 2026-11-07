@@ -73,5 +73,14 @@ export type SiteContent = {
   footer: {
     copyright: string
     builtWith: string
+    creditsLabel: string
+    credits: CreditItem[]
   }
+}
+
+// 使用しているライブラリのライセンス表示（MIT の表示条件を満たすため）
+export type CreditItem = {
+  name: string
+  href: string
+  note: string
 }

@@ -170,5 +170,18 @@ export const en: SiteContent = {
   footer: {
     copyright: '© 2026 Atsunori Nagaya',
     builtWith: 'Built with smarthr-ui and hosted on GitHub Pages.',
+    creditsLabel: 'Libraries and licenses',
+    credits: [
+      {
+        name: 'smarthr-ui',
+        href: 'https://github.com/kufu/smarthr-ui/blob/master/LICENSE',
+        note: 'MIT License, Copyright 2018 SmartHR',
+      },
+      {
+        name: 'Font Awesome Free',
+        href: 'https://fontawesome.com/license/free',
+        note: 'icons (via react-icons), CC BY 4.0',
+      },
+    ],
   },
 }
