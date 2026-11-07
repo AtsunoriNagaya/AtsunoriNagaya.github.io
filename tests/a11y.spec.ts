@@ -69,3 +69,19 @@ test.describe('English', () => {
     await expect(page.locator('html')).toHaveAttribute('lang', 'en')
   })
 })
+
+// 200% 拡大や狭い画面でも横スクロールが出ないこと（WCAG 1.4.10 リフロー相当）
+test.describe('Narrow viewport (640px, roughly 200% zoom on a laptop)', () => {
+  test.use({ viewport: { width: 640, height: 900 } })
+
+  test('has no horizontal overflow and no axe violations', async ({ page }) => {
+    await page.goto('/')
+    const { scrollWidth, clientWidth } = await page.evaluate(() => ({
+      scrollWidth: document.documentElement.scrollWidth,
+      clientWidth: document.documentElement.clientWidth,
+    }))
+    expect(scrollWidth).toBeLessThanOrEqual(clientWidth)
+    await expectHeadingStructure(page)
+    await expectNoAxeViolations(page)
+  })
+})
