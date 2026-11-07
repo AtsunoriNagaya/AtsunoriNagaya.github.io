@@ -1,0 +1,61 @@
+/* smarthr-ui.css の後に読み込む。サイト固有の最小限のスタイルだけを置く */
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f7f6;
+  color: #23221f;
+}
+
+/* スキップリンク。通常は画面外に置き、フォーカスされたときだけ左上に表示する */
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: #0077c7;
+  border: 2px solid #0077c7;
+  border-radius: 0.25rem;
+  text-decoration: underline;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid #23221f;
+  outline-offset: 2px;
+}
+
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d6d3d0;
+}
+
+.plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer {
+  border-top: 1px solid #d6d3d0;
+  background-color: #ffffff;
+}
+
+/* 200% 拡大や狭い画面でも横スクロールが出ないようにする */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* 動きを減らす設定の利用者には、スムーススクロールを使わない */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
